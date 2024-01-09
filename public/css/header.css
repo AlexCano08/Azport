@@ -1,0 +1,266 @@
+/*  Comienta barra navbar */
+
+.nav {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbarHome {
+    padding: 15px 0;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+}
+
+.itemsNav {
+    display: none;
+}
+
+.divResponsive {
+    position: relative;
+    width: 100%;
+
+}
+
+.menuResponsive {
+    position: absolute;
+    inset: 0;
+    top: 46.9px;
+    height: 45vh;
+    width: 45vh;
+    left: -40px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 15px;
+    background-color: white;
+    transition: all 0.15s ease-out;
+}
+
+.iconoMenu {
+    display: none;
+}
+
+.iconoMenu:checked+.menuResponsive {
+    display: flex;
+
+}
+
+.searchBar {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.searchResponsive+.inputResponsive {
+    width: 100%;
+}
+
+.formResponsive {
+    display: flex;
+}
+
+.formN input {
+    display: none;
+}
+
+.menu-toggle {
+    animation: none;
+}
+
+.inputS {
+    height: 4vh;
+    width: 100%;
+    background-color: #e8e6e6;
+    align-items: left;
+    justify-self: end;
+    text-align: left;
+}
+
+.logoNav {
+    /*height: 30px;*/
+    position: absolute;
+    left: 42%;
+}
+
+.imgLogo {
+    height: 54px;
+    width: 68px;
+}
+
+.btnN {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    background-color: white;
+}
+
+.navIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    flex-direction: row;
+    /* padding-right: 10px; */
+}
+
+.iconNav {
+    width: 20px;
+}
+
+i {
+    font-size: 20px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.drop {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#salutation {
+    display: block;
+}
+
+#collapsable {
+    display: none;
+}
+
+#logout {
+    display: block;
+}
+
+
+
+
+/*  Termina barra navbar */
+
+@media (min-width: 468px) {
+    .itemsNav {
+        display: none;
+    }
+
+    .formN input {
+        display: none;
+    }
+
+    .logoNav {
+        left: 45%;
+    }
+
+}
+
+@media (max-width:1021px) {
+    .searchBar {
+        opacity: 0;
+    }
+
+    #salutation {
+        display: none;
+    }
+
+    #logout {
+        display: none;
+    }
+}
+
+
+@media (max-width: 514px) {
+    .menuResponsive {
+        height: 45vh;
+        width: 45vh;
+    }
+
+}
+
+@media (min-width: 1021px) {
+
+    i.fa-bars {
+        display: none;
+    }
+
+    .itemsNav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 80px;
+    }
+
+    .logoNav {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        padding-left: 25px;
+        position: unset;
+    }
+
+    .searchBar {
+        justify-content: end;
+    }
+
+    .divResponsive {
+        display: none;
+    }
+
+
+
+    .formN {
+        display: flex;
+        gap: 2px;
+        padding-right: 25px;
+    }
+
+    .formN input {
+        display: block;
+    }
+
+}
+
+;

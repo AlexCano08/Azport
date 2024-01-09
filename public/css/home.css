@@ -1,0 +1,175 @@
+/*  Comienta barra navbar */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.headerHeaderN {
+    margin-top: 70px;
+}
+
+.headerN {
+    background-color: #D9D9D9;
+    height: 620px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.headerN img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Empieza el body con cards */
+
+.bodyHome {
+    background-color: white;
+    margin: 0px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+}
+
+.titleCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card:hover {
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    /* margin: 20px; */
+    /*width: 20%;*/
+}
+
+.imgCard {
+    width: 100%;
+    height: 100%;
+}
+
+.descripcionCard {
+    text-align: left;
+    justify-content: center;
+}
+
+.card2 {
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.imgCard2 {
+    width: 100%;
+    height: 600px;
+    object-fit: cover
+}
+
+
+.card2:hover {
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.descripcionCard2 {
+    margin: 20px;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+}
+
+.shopCards {
+    display: flex;
+    flex-direction: column;
+}
+
+.btnA {
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    margin: 30px;
+    border-radius: 50% solid #ffff;
+}
+
+.descripA {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+article {
+    margin: 40px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+@media (min-width: 468px) {
+
+    article {
+        width: 45%;
+    }
+
+
+}
+
+@media (min-width:780px) {
+
+    .bodyHome {
+        padding: 30px;
+    }
+
+    .shopCards {
+        flex-direction: row;
+    }
+
+    .card2 {
+        background-color: #C5C5C5;
+        align-items: center;
+        justify-content: center;
+        width: 32%;
+    }
+
+    .imgCard2 {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .cards {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    article {
+        width: 20%;
+    }
+
+
+}
+
+@media (min-width: 1023px) {
+
+    .imgCard2 {
+        height: 600px;
+    }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "email": "CANO_ALEJANDRO97@HOTMAIL.COM",
+    "password": "$2a$10$E07Ng2CVd1ULMtyclV6ZHeqWpksDOnGXxdCRPL4ABlT5hFSjkyZlC",
+    "nombre": "Alejandro",
+    "apellido": "Cano",
+    "rol": "administrador"
+  }
+]

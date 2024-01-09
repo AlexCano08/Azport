@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/createProduct.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Inter:wght@300&family=Poppins:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <title>List Of Products</title>
+</head>
+
+<body>
+
+    <%- include("../partials/header"); %>
+
+        <main>
+            <div class="title">
+                <h1>Crear nuevo producto</h1>
+            </div>
+
+            <div class="form-Info">
+                <form action="/admin/create" method="POST" enctype="multipart/form-data" id="form-Product">
+                    <div class="inputInfo">
+                        <label for="nombre">Nombre del Producto</label>
+                        <input type="text" name="nombre" placeholder="Coloca nombre del producto" id="nombre"
+                            value="<%= locals.oldData ? oldData.nombre : null %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                            <p class="error">
+                                <%= errors.nombre.msg %>
+                            </p>
+                            <% } %>
+                                <span class="error" id="error-nombre"></span>
+                    </div>
+                    <div class="inputInfo">
+                        <label for="">Descripcion del Producto</label>
+                        <input type="text" name="descripcion" placeholder="Coloca la descripcion del producto"
+                            id="descripcion" value="<%= locals.oldData ? oldData.descripcion : null %>">
+                        <% if (locals.errors && errors.descripcion) { %>
+                            <p class="error">
+                                <%= errors.descripcion.msg %>
+                            </p>
+                            <% } %>
+                                <span class="error" id="error-descripcion"></span>
+                    </div>
+                    <div class="inputInfo">
+                        <label for="">Imagen del producto</label>
+                        <input type="file" name="imagen" id="imagen">
+                        <% if (locals.errors && errors.imagen) { %>
+                            <p class="error">
+                                <%= errors.imagen.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                    <div class="inputInfo">
+                        <label for="">Selecciona la categoria</label>
+                        <select name="categoria">
+
+                            <% for( let i=0; i < categories.length; i++ ) { %>
+                                <option value="<%= categories[i].id %>">
+                                    <%= categories[i].name %>
+                                </option>
+                                <% } %>
+                        </select>
+                        <!-- <input type="text" name="categoria" placeholder="Coloca la categoria del producto"> -->
+                    </div>
+                    <div class="inputInfo">
+                        <label for="">Color del Producto</label>
+                        <input type="text" name="color" placeholder="Coloca el color del producto">
+                    </div>
+                    <div class="inputInfo">
+                        <label for="">Precio del Producto</label>
+                        <input type="text" name="precio" placeholder="Coloca el precio del producto">
+                    </div>
+                    <div>
+                        <button type="submit">Guardar</button>
+                        <button><a href="/admin">Volver</a></button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script src="/js/validationProduct.js"></script>
+</body>
+
+</html>

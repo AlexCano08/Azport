@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/home.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Inter:wght@300&family=Poppins:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <title> AZPORT || PAGINA WEB </title>
+</head>
+
+<body>
+    <!-- Empieza navbar -->
+
+    <%- include("partials/header"); %>
+
+        <!-- Termina nabvar -->
+
+        <div class="headerHeaderN">
+            <div class="headerN">
+                <img src="/img/banner.jpg" alt="">
+            </div>
+        </div>
+        <!-- Empiezan las cards -->
+        <div class="bodyHome">
+            <div class="titleCards">
+                <div>
+                    <p> <b>NEW RELEASE </b></p>
+                </div>
+                <div>
+                    <p> <b>View all </b> </p>
+                </div>
+            </div>
+
+
+            <div class="cards">
+
+
+                <% for(let i=0; i < productos.length && i < 4; i++) { %>
+
+                    <article>
+                        <div class="card">
+                            <a href="/products/detail/<%=productos[i].id%>">
+                                <img src="/img/<%= productos[i].image%>" alt="TopRosa" class="imgCard">
+                                <p class="descripcionCard"><b>
+                                        <%= productos[i].name %>
+                                    </b></p>
+                                <p class="colorItem">
+                                    <%= productos[i].color %>
+                                </p>
+                                <p class="priceItem">
+                                    $<%= productos[i].price %>
+                                </p>
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <% } %>
+
+
+            </div>
+
+
+            <p class="titleCards"> <b> SHOP </b></p>
+            <div class="cards shopCards">
+                <div class="card2">
+                    <a href="/products?category=1">
+                        <img src="../img/showWomen.jpg" alt="shopWomen" class="imgCard2">
+                        <div class="descripA">
+                            <p class="descripcionCard2"><b>SHOP WOMEN </b> </p>
+                            <p class="btnA"><i class="fas fa-arrow-right" style="color: #0c0d0d;"></i></p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card2">
+                    <a href="/products?category=2">
+                        <img src="/img/showMen.jpg" alt="shopMen" class="imgCard2">
+                        <div class="descripA">
+                            <p class="descripcionCard2"><b> SHOP MEN </b></p>
+                            <p class="btnA"><i class="fas fa-arrow-right" style="color: #0c0d0d;"></i></p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="card2">
+                    <a href="/products?category=3">
+                        <img src="/img/showAcc.jpg" alt="ShopAccs" class="imgCard2">
+                        <div class="descripA">
+                            <p class="descripcionCard2"><b> SHOP ACCESORIES</b></p>
+                            <p class="btnA"><i class="fas fa-arrow-right" style="color: #0c0d0d;"></i></p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <script type="javascript" src="js/validations.js"></script>
+        <!-- Terminan las cards -->
+</body>
+
+<!-- Empieza el footer :) -->
+<%- include("partials/footer"); %>
+    <!-- Termina el footer <3 -->
+
+</html>

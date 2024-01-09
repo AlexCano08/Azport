@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Seamless Vital 2.0 Legging",
+    "descripcion": "Legging Negro",
+    "oldImagen": "product-1690404135442.jpg",
+    "categoria": "Women",
+    "color": "Black",
+    "precio": "20",
+    "id": 3,
+    "imagen": "product-1691023233401.jpg"
+  },
+  {
+    "nombre": "Seamless Long Sleeve Crop Top",
+    "descripcion": "Crop Top Rosa",
+    "oldImagen": "product-1690404306265.jpg",
+    "categoria": "Women",
+    "color": "Pink",
+    "precio": "25",
+    "id": 4,
+    "imagen": "product-1691023245658.jpg"
+  },
+  {
+    "nombre": "Seamless Training Top",
+    "descripcion": "Top color rosa",
+    "oldImagen": "product-1690404338073.jpg",
+    "categoria": "Women",
+    "color": "Pink",
+    "precio": "20",
+    "id": 5,
+    "imagen": "product-1691023255646.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Sport T-Shirt",
+    "descripcion": "Playeras",
+    "imagen": "product-1691033911790.jpg",
+    "categoria": "Men",
+    "color": "Green Army",
+    "precio": "40"
+  },
+  {
+    "id": 7,
+    "nombre": "Seamless Training Crop Top",
+    "descripcion": "Top color rosa",
+    "imagen": "product-1691854199841.jpg",
+    "categoria": "Women",
+    "color": "Pink",
+    "precio": "20"
+  }
+]
